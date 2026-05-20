@@ -21,6 +21,6 @@ class Dog extends Animal
 {
   public function run(): void
   {
-    echo "Cat $this->name is running" . PHP_EOL;
+    echo "Dog $this->name is running" . PHP_EOL;
   }
 }
