@@ -11,3 +11,7 @@ var_dump($company);
 
 $company->programmer = new FrontendProgrammer("Nadif");
 var_dump($company);
+
+sayHelloProgrammer(new Programmer("Nadif"));
+sayHelloProgrammer(new BackendProgrammer("Nadif"));
+sayHelloProgrammer(new FrontendProgrammer("Nadif"));
