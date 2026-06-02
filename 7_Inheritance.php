@@ -3,9 +3,9 @@
 require_once "data/2_Manager.php";
 
 $manager = new Manager();
-$manager->name = "Budi";
+$manager->name = "Nadif";
 $manager->sayHello("Joko");
 
 $vp = new VicePresident();
-$vp->name = "Nadif";
+$vp->name = "Budi";
 $vp->sayHello("Joko");

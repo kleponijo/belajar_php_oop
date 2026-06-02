@@ -6,9 +6,9 @@ $nadif = new Person("Nadif", "Banyuwangi");
 $nadif->name = "Nadif";
 $nadif->sayHello("Budi");
 
-$joko = new Person("Budi", "Jakarta");
-$joko->name = "Joko";
+$joko = new Person("Budi", null);
+$joko->name = "Jokow*";
 $joko->sayHello(null);
 
-$joko->info();
 $nadif->info();
+$joko->info();

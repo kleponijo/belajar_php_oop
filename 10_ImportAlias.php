@@ -8,7 +8,7 @@ use Data\Two\Conflict as Conflict2;
 use function Helper\helpMe as help;
 use const Helper\APPLICATION as APP;
 
-$conflict1 = new Conflict1();
+$conflict = new Conflict1();
 $conflict2 = new Conflict2();
 
 help();

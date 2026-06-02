@@ -11,11 +11,12 @@ class Product
     $this->price = $price;
   }
 
-  function getName(): String
+  public function getName(): String
   {
     return $this->name;
   }
-  function getPrice(): int
+
+  public function getPrice(): int
   {
     return $this->price;
   }
@@ -26,6 +27,6 @@ class ProductDummy extends Product
   public function info()
   {
     echo "Name $this->name" . PHP_EOL;
-    echo "Price $this->price" . PHP_EOL;
+    echo "Name $this->price" . PHP_EOL;
   }
 }

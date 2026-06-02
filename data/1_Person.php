@@ -2,8 +2,7 @@
 
 class Person
 {
-
-  const AUTHOR = "Klepon Ijo";
+  const AUTHOR = "Nadif Zidan Tazaka";
 
   var String $name;
   var ?String $address = null;
@@ -22,7 +21,6 @@ class Person
     } else {
       echo "Hi $name, my name is $this->name" . PHP_EOL;
     }
-    echo "Hello $name" . PHP_EOL;
   }
 
   function info()
@@ -32,6 +30,6 @@ class Person
 
   function __destruct()
   {
-    echo "Object Person $this->name is destroyed" . PHP_EOL;
+    echo "Object person $this->name is destroyed" . PHP_EOL;
   }
 }
