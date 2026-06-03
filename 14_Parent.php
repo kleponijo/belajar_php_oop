@@ -4,8 +4,8 @@ require_once "data/6_Shape.php";
 
 use Data\{Shape, Rectangle};
 
-$data = new Shape();
-echo $data->getCorner() . PHP_EOL;
+$shape = new Shape();
+echo $shape->getCorner() . PHP_EOL;
 
 $rectangle = new Rectangle();
 echo $rectangle->getCorner() . PHP_EOL;

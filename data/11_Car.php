@@ -6,22 +6,24 @@ use Override;
 
 interface HasBrand
 {
-  function getBrand(): string;
+  function getBrand(): String;
 }
 
-interface IsMaintanance
+interface IsMaintenance
 {
-  function isMaintanance(): bool;
+  function isMaintenance(): bool;
 }
 
 interface Car extends HasBrand
 {
+
   function drive(): void;
   function getTire(): int;
 }
 
-class Avanza implements Car, IsMaintanance
+class Avanza implements Car, IsMaintenance
 {
+
   public function drive(): void
   {
     echo "Drive Avanza" . PHP_EOL;
@@ -37,7 +39,7 @@ class Avanza implements Car, IsMaintanance
     return "Toyota";
   }
 
-  public function isMaintanance(): bool
+  public function isMaintenance(): bool
   {
     return false;
   }

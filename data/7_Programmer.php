@@ -3,6 +3,7 @@
 class Programmer
 {
   public String $name;
+
   public function __construct(String $name)
   {
     $this->name = $name;
@@ -11,7 +12,7 @@ class Programmer
 
 class BackendProgrammer extends Programmer {}
 
-class FrontendProgrammer extends Programmer {}
+class FrontEndProgrammer extends Programmer {}
 
 class Company
 {
@@ -20,11 +21,9 @@ class Company
 
 function sayHelloProgrammer(Programmer $programmer)
 {
-  echo "Hello Programmer $programmer->name" . PHP_EOL;
-
   if ($programmer instanceof BackendProgrammer) {
     echo "Hello Backend Programmer $programmer->name" . PHP_EOL;
-  } else if ($programmer instanceof FrontendProgrammer) {
+  } else if ($programmer instanceof FrontEndProgrammer) {
     echo "Hello Frontend Programmer $programmer->name" . PHP_EOL;
   } else if ($programmer instanceof Programmer) {
     echo "Hello Programmer $programmer->name" . PHP_EOL;

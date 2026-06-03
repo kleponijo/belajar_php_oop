@@ -1,6 +1,8 @@
 <?php
 
-namespace Data\traits;
+namespace Data\Traits;
+
+use Override;
 
 trait SayGoodBye
 {
@@ -8,9 +10,9 @@ trait SayGoodBye
   function goodBye(?String $name): void
   {
     if (is_null($name)) {
-      echo "Good bye" . PHP_EOL;
+      echo "Good Bye" . PHP_EOL;
     } else {
-      echo "Good bye $name" . PHP_EOL;
+      echo "Good Bye $name" . PHP_EOL;
     }
   }
 }
@@ -21,14 +23,52 @@ trait SayHello
   function hello(?String $name): void
   {
     if (is_null($name)) {
-      echo "hello" . PHP_EOL;
+      echo "Hello" . PHP_EOL;
     } else {
-      echo "hello $name" . PHP_EOL;
+      echo "Hello $name" . PHP_EOL;
     }
+  }
+}
+
+trait HasName
+{
+  public String $name;
+}
+
+trait CanRun
+{
+  public abstract function run(): void;
+}
+
+class ParentPerson
+{
+  public function goodBye(?string $name): void
+  {
+    echo "Good Bye in Person" . PHP_EOL;
+  }
+
+
+  public function hello(?string $name): void
+  {
+    echo "Hello in Person" . PHP_EOL;
+  }
+}
+
+trait All
+{
+  use SayGoodBye, SayHello, HasName, CanRun {
+    // bisa dioverride
+    // hello as private;
+    // goodBye as private;
   }
 }
 
 class Person
 {
-  use SayGoodBye, SayHello;
+  use All;
+
+  public function run(): void
+  {
+    echo "Person $this->name is running" . PHP_EOL;
+  }
 }

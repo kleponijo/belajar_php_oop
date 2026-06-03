@@ -2,6 +2,8 @@
 
 namespace Data;
 
+use Override;
+
 class Shape
 {
   public function getCorner()
@@ -12,6 +14,7 @@ class Shape
 
 class Rectangle extends Shape
 {
+
   public function getCorner()
   {
     return 4;

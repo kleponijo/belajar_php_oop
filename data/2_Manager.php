@@ -4,6 +4,13 @@ class Manager
 {
 
   var String $name;
+  var String $title;
+
+  public function __construct(String $name = "", String $title = "Manager")
+  {
+    $this->name = $name;
+    $this->title = $title;
+  }
 
   function sayHello(String $name): void
   {
@@ -13,6 +20,14 @@ class Manager
 
 class VicePresident extends Manager
 {
+
+
+  public function __construct(String $name = "")
+  {
+    // tidak wajib tapi direkomendasikan
+    parent::__construct($name, "VP");
+  }
+
 
   function sayHello(String $name): void
   {

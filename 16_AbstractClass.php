@@ -2,10 +2,10 @@
 
 require_once "data/8_Location.php";
 
-use Data\{City, Province, Country};
+use Data\{Location, City,  Province, Country};
 
-// $location = new Location(); error
+// $location = new Location(); // ERROR
 
-$city =  new City();
-$province =  new Province();
-$country =  new Country();
+$city = new City();
+$province = new Province();
+$country = new Country();
